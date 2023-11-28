@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pokedex/model/agent_model.dart';
 import 'package:flutter_pokedex/network/repository.dart';
 import 'package:flutter_pokedex/page/agent_profile/agent_details.dart';
-// import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'dart:math' as math;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
-  //TODO membuat tampilan agent pada homescreen menjadi stack
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,8 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 5),
-              padding: EdgeInsets.all(5),
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(border: Border.all(color: Colors.red)),
               width: double.infinity,
               height: 400,
