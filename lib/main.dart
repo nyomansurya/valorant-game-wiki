@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/home_screen.dart';
+import 'package:flutter_pokedex/page/home_screen.dart';
 
-void main(){
-  runApp(Pokedex());
+void main() {
+  runApp(const ValorantAgentApp());
 }
 
-class Pokedex extends StatelessWidget {
-  const Pokedex({super.key});
+class ValorantAgentApp extends StatelessWidget {
+  const ValorantAgentApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen(),);
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    );
   }
 }

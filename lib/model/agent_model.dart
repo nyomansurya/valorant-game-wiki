@@ -17,7 +17,7 @@ class ValorantAgent {
   final bool isPlayableCharacter;
   final bool isAvailableForTest;
   final bool isBaseContent;
-  final Map<String, String> role;
+  final ValorantRole role;
   final List<ValorantAbility> abilities;
 
   ValorantAgent({
@@ -45,7 +45,7 @@ class ValorantAgent {
 
   factory ValorantAgent.fromJson(Map<String, dynamic> json) {
     List<String> tags = [];
-    Map<String, String> role = {};
+    ValorantRole? role;
 
     dynamic characterRole = json['role'];
     dynamic characterTags = json['characterTags'];
@@ -58,8 +58,13 @@ class ValorantAgent {
       }
     }
 
-    if (characterRole != null){
-        role = Map<String, String>.from(characterRole);
+
+    if (characterRole != null) {
+      role = ValorantRole(
+        displayName: characterRole['displayName'] ?? '',
+        description: characterRole['description'] ?? '',
+        displayIcon: characterRole['displayIcon'] ?? '',
+      );
     }
 
     return ValorantAgent(
@@ -82,7 +87,11 @@ class ValorantAgent {
       isPlayableCharacter: json['isPlayableCharacter'] ?? false,
       isAvailableForTest: json['isAvailableForTest'] ?? false,
       isBaseContent: json['isBaseContent'] ?? false,
-      role: role,
+       role: role ?? ValorantRole(
+        displayName: '', // Default values
+        description: '',
+        displayIcon: '',
+      ),
       abilities: (json['abilities'] as List<dynamic>)
           .map((e) => ValorantAbility.fromJson(e))
           .toList(),
@@ -132,6 +141,46 @@ class ValorantAbility {
   factory ValorantAbility.fromJson(Map<String, dynamic> json) {
     return ValorantAbility(
       slot: json['slot'] ?? '',
+      displayName: json['displayName'] ?? '',
+      description: json['description'] ?? '',
+      displayIcon: json['displayIcon'] ?? '',
+    );
+  }
+}
+
+// class ValorantRole {
+//   final String displayName;
+//   final String description;
+//   final String displayIcon;
+
+//   ValorantRole({
+//     required this.displayName,
+//     required this.description,
+//     required this.displayIcon,
+//   });
+
+//   factory ValorantRole.from(Map<String, dynamic> json) {
+//     return ValorantRole(
+//       displayName: json['displayName'] ?? '',
+//       description: json['displayIcon'] ?? '',
+//       displayIcon: json['displayIcon'] ?? '',
+//     );
+//   }
+// }
+
+class ValorantRole {
+  final String displayName;
+  final String description;
+  final String displayIcon;
+
+  ValorantRole({
+    required this.displayName,
+    required this.description,
+    required this.displayIcon,
+  });
+
+  factory ValorantRole.from(Map<String, dynamic> json) {
+    return ValorantRole(
       displayName: json['displayName'] ?? '',
       description: json['description'] ?? '',
       displayIcon: json['displayIcon'] ?? '',
