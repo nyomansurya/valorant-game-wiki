@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/model/agent_model.dart';
+import 'package:flutter_valorantagent/model/agent_model.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class AgentAbility extends StatelessWidget {

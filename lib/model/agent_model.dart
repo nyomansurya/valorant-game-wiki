@@ -58,7 +58,6 @@ class ValorantAgent {
       }
     }
 
-
     if (characterRole != null) {
       role = ValorantRole(
         displayName: characterRole['displayName'] ?? '',
@@ -87,43 +86,18 @@ class ValorantAgent {
       isPlayableCharacter: json['isPlayableCharacter'] ?? false,
       isAvailableForTest: json['isAvailableForTest'] ?? false,
       isBaseContent: json['isBaseContent'] ?? false,
-       role: role ?? ValorantRole(
-        displayName: '', // Default values
-        description: '',
-        displayIcon: '',
-      ),
+      role: role ??
+          ValorantRole(
+            displayName: '', 
+            description: '',
+            displayIcon: '',
+          ),
       abilities: (json['abilities'] as List<dynamic>)
           .map((e) => ValorantAbility.fromJson(e))
           .toList(),
     );
   }
 }
-
-// class ValorantRole {
-//   final String uuid;
-//   final String displayName;
-//   final String description;
-//   final String displayIcon;
-//   final String assetPath;
-
-//   ValorantRole({
-//     required this.uuid,
-//     required this.displayName,
-//     required this.description,
-//     required this.displayIcon,
-//     required this.assetPath,
-//   });
-
-//   factory ValorantRole.fromJson(Map<String, dynamic> json) {
-//     return ValorantRole(
-//       uuid: json['uuid'] ?? '',
-//       displayName: json['displayName'] ?? '',
-//       description: json['description'] ?? '',
-//       displayIcon: json['displayIcon'] ?? '',
-//       assetPath: json['assetPath'] ?? '',
-//     );
-//   }
-// }
 
 class ValorantAbility {
   final String slot;
@@ -147,26 +121,6 @@ class ValorantAbility {
     );
   }
 }
-
-// class ValorantRole {
-//   final String displayName;
-//   final String description;
-//   final String displayIcon;
-
-//   ValorantRole({
-//     required this.displayName,
-//     required this.description,
-//     required this.displayIcon,
-//   });
-
-//   factory ValorantRole.from(Map<String, dynamic> json) {
-//     return ValorantRole(
-//       displayName: json['displayName'] ?? '',
-//       description: json['displayIcon'] ?? '',
-//       displayIcon: json['displayIcon'] ?? '',
-//     );
-//   }
-// }
 
 class ValorantRole {
   final String displayName;

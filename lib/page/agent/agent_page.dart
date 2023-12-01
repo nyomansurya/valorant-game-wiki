@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/model/agent_model.dart';
-import 'package:flutter_pokedex/network/repository.dart';
-import 'package:flutter_pokedex/page/agent_profile/agent_details.dart';
+import 'package:flutter_valorantagent/model/agent_model.dart';
+import 'package:flutter_valorantagent/network/agent_api.dart';
+import 'package:flutter_valorantagent/page/agent/agent_details.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class AgentListPage extends StatefulWidget {
+  const AgentListPage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<AgentListPage> createState() => _AgentListPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _AgentListPageState extends State<AgentListPage> {
   List<ValorantAgent> listValorantAgent = [];
 
-  Repository repository = Repository();
+  AgentApi agentApi = AgentApi();
 
-  getData() async {
-    listValorantAgent = await repository.fetchValorantAgents();
+  getAgent() async {
+    listValorantAgent = await agentApi.fetchValorantAgents();
     setState(() {});
   }
 
-  List<ValorantAgent> listWithoutNullAgent = [];
+
 
   @override
   void initState() {
-    getData();
+    getAgent();
     super.initState();
   }
 

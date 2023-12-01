@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/model/agent_model.dart';
-import 'package:flutter_pokedex/page/agent_profile/agent_ability.dart';
+import 'package:flutter_valorantagent/model/agent_model.dart';
+import 'package:flutter_valorantagent/page/agent/agent_ability.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class AgentProfile extends StatelessWidget {
@@ -12,16 +12,19 @@ class AgentProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Padding(
-        padding: EdgeInsets.only(bottom: 50.0), // Adjust the position as needed
+        padding: const EdgeInsets.only(
+            bottom: 50.0), // Adjust the position as needed
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(10))),
+            backgroundColor: Colors.transparent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusDirectional.circular(10),
+            ),
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Icon(Icons.arrow_back_outlined),
+          child: const Icon(Icons.arrow_back_outlined),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
@@ -97,10 +100,22 @@ class AgentProfile extends StatelessWidget {
                 ),
               ),
             ),
-            AgentAbility(index: 0, agent: agent),
-            AgentAbility(index: 1, agent: agent),
-            AgentAbility(index: 2, agent: agent),
-            AgentAbility(index: 3, agent: agent),
+            AgentAbility(
+              index: 0,
+              agent: agent,
+            ),
+            AgentAbility(
+              index: 1,
+              agent: agent,
+            ),
+            AgentAbility(
+              index: 2,
+              agent: agent,
+            ),
+            AgentAbility(
+              index: 3,
+              agent: agent,
+            ),
           ],
         ),
       ]),
