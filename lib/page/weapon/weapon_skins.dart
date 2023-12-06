@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_valorantagent/model/weapon_model.dart';
 
 class WeaponSkins extends StatelessWidget {
-  const WeaponSkins({Key? key, required this.skins});
+  const WeaponSkins({super.key, required this.skins});
 
   final List<Skins> skins;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // margin: EdgeInsets.symmetric(horizontal: 10),
       height: 100,
       child: ListView(
@@ -16,9 +16,9 @@ class WeaponSkins extends StatelessWidget {
         children: skins.map(
           (skin) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Container(
-                margin: EdgeInsetsDirectional.symmetric(vertical: 10),
+                margin: const EdgeInsetsDirectional.symmetric(vertical: 10),
                 width: 125,
                 height: 100,
                 decoration: BoxDecoration(

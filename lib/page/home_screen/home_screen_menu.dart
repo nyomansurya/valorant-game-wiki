@@ -44,7 +44,7 @@ class HomeScreenMenu extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                       fontFamily: 'Valorant',
-                      fontSize: 28,
+                      fontSize: 20,
                       color: Colors.white),
                 ),
               ),

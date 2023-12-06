@@ -21,8 +21,6 @@ class _AgentListPageState extends State<AgentListPage> {
     setState(() {});
   }
 
-
-
   @override
   void initState() {
     getAgent();
@@ -39,18 +37,16 @@ class _AgentListPageState extends State<AgentListPage> {
           'VALORANT AGENT',
           style: TextStyle(
             fontFamily: 'Valorant',
-            fontSize: 26,
-            fontWeight: FontWeight.bold,
           ),
         ),
         centerTitle: true,
       ),
       body: GridView.count(
-        childAspectRatio: 0.4,
+        childAspectRatio: 0.6,
         crossAxisCount: 2,
         primary: true,
         mainAxisSpacing: 10,
-        crossAxisSpacing: 5,
+        crossAxisSpacing: 2,
         children: listValorantAgent
             .where((agent) => agent.isPlayableCharacter)
             .map((agent) {
@@ -67,7 +63,6 @@ class _AgentListPageState extends State<AgentListPage> {
             },
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 5),
-              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(border: Border.all(color: Colors.red)),
               width: double.infinity,
               height: 400,
@@ -75,10 +70,13 @@ class _AgentListPageState extends State<AgentListPage> {
                 alignment: Alignment.center,
                 children: [
                   Positioned(
-                    top: 50,
-                    left: 9,
-                    width: 140,
-                      child: Image.asset('assets/images/valorant-logo-outline.png', color: Colors.red,)),
+                      top: 50,
+                      left: 9,
+                      width: 140,
+                      child: Image.asset(
+                        'assets/images/valorant-logo-outline.png',
+                        color: Colors.red,
+                      )),
                   Positioned(
                     left: -60,
                     width: 380,
@@ -93,7 +91,7 @@ class _AgentListPageState extends State<AgentListPage> {
                       agent.displayName,
                       style: const TextStyle(
                         fontFamily: 'Valorant',
-                        fontSize: 25,
+                        fontSize: 16,
                         color: Colors.white,
                       ),
                     ),
