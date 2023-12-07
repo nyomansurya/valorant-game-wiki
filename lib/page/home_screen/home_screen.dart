@@ -5,7 +5,7 @@ import 'package:flutter_valorantagent/page/home_screen/home_screen_menu.dart';
 import 'package:flutter_valorantagent/page/maps_page.dart';
 import 'package:flutter_valorantagent/page/player_cards.dart';
 import 'package:flutter_valorantagent/page/rank/ranks_page.dart';
-import 'package:flutter_valorantagent/page/sprays_page.dart';
+import 'package:flutter_valorantagent/page/spray/sprays_page.dart';
 import 'package:flutter_valorantagent/page/weapon/weapons_page.dart';
 import 'package:hexcolor/hexcolor.dart';
 
