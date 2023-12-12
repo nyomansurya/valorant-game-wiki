@@ -3,7 +3,7 @@ import 'package:flutter_valorantagent/page/agent/agent_page.dart';
 import 'package:flutter_valorantagent/page/gun_buddies_page.dart';
 import 'package:flutter_valorantagent/page/home_screen/home_screen_menu.dart';
 import 'package:flutter_valorantagent/page/maps_page.dart';
-import 'package:flutter_valorantagent/page/player_cards.dart';
+import 'package:flutter_valorantagent/page/player_cards/player_cards_page.dart';
 import 'package:flutter_valorantagent/page/rank/ranks_page.dart';
 import 'package:flutter_valorantagent/page/spray/sprays_page.dart';
 import 'package:flutter_valorantagent/page/weapon/weapons_page.dart';
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
           HomeScreenMenu(
             title: 'player\ncards',
             imagePath: 'assets/images/player-cards.png',
-            destinationPage: PlayerCards(),
+            destinationPage: PlayerCardsPage(),
           ),
           HomeScreenMenu(
             title: 'maps',
