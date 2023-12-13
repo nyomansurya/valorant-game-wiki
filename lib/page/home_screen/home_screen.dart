@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_valorantagent/page/agent/agent_page.dart';
 import 'package:flutter_valorantagent/page/gun_buddies/gun_buddies_page.dart';
 import 'package:flutter_valorantagent/page/home_screen/home_screen_menu.dart';
-import 'package:flutter_valorantagent/page/maps_page.dart';
+import 'package:flutter_valorantagent/page/maps/maps_page.dart';
 import 'package:flutter_valorantagent/page/player_cards/player_cards_page.dart';
 import 'package:flutter_valorantagent/page/rank/ranks_page.dart';
 import 'package:flutter_valorantagent/page/spray/sprays_page.dart';
