@@ -40,7 +40,7 @@ class _GunBuddiesPageState extends State<GunBuddiesPage> {
         centerTitle: true,
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20),
+        margin:  EdgeInsets.symmetric(horizontal: 20),
         child: GridView.count(
           childAspectRatio: 0.9,
           crossAxisCount: 2,
