@@ -1,4 +1,4 @@
-package com.example.flutter_pokedex
+package com.example.flutter_valorant
 
 import io.flutter.embedding.android.FlutterActivity
 
