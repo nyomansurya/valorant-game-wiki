@@ -1,4 +1,4 @@
-# Valorant Wiki App
+# Valorant Game Wiki App
 
 This is my valorant wiki app, the API i used on this app is from https://valorant-api.com/ 
 
