@@ -1,6 +1,6 @@
 # Valorant Wiki App
 
-This is my valorant wiki app, the API i used on this app is from https://valorant-api.com/v1/agents 
+This is my valorant wiki app, the API i used on this app is from https://valorant-api.com/ 
 
 
 Hovewer you can get the apk file from my project from the link below :
